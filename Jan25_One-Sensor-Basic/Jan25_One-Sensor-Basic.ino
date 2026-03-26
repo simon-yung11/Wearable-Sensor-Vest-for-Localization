@@ -1,4 +1,4 @@
-#include "SparkFun_TMAG5273_Arduino_Library.h" // Used to send and recieve specific information from our sensor
+#include "SparkFun_TMAG5273_Arduino_Library.h" // Used to send and receive specific information from our sensor
 #include <Wire.h>                              // Used to establish serial communication on the I2C bus
 
 TMAG5273 sensor; // Initialize hall-effect sensor
@@ -55,23 +55,29 @@ void loop()
         // Serial.print(magX); 
         // Serial.print(" "); 
         
-        Serial.print("X_avg:"); 
-        Serial.print(xAvg); 
-        Serial.print(" "); 
-        
-        // Serial.print("Y:"); 
-        // Serial.print(magY); 
+        // Serial.print("X_avg:"); 
+        // Serial.print(xAvg); 
         // Serial.print(" "); 
         
-        Serial.print("Y_avg:"); 
-        Serial.print(yAvg); 
-        Serial.print(" "); 
+        // // Serial.print("Y:"); 
+        // // Serial.print(magY); 
+        // // Serial.print(" "); 
         
-        // Serial.print("Z:"); 
-        // Serial.print(magZ); 
+        // Serial.print("Y_avg:"); 
+        // Serial.print(yAvg); 
         // Serial.print(" "); 
         
-        Serial.print("Z_avg:"); 
+        // // Serial.print("Z:"); 
+        // // Serial.print(magZ); 
+        // // Serial.print(" "); 
+        
+        // Serial.print("Z_avg:"); 
+        // Serial.println(zAvg);
+
+        Serial.print(xAvg);
+        Serial.print(",");
+        Serial.print(yAvg);
+        Serial.print(",");
         Serial.println(zAvg);
 
         delay(100);
